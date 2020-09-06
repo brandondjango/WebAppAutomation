@@ -1,0 +1,5 @@
+adapter:  'mysql2'
+host:     'localhost'
+database: 'test_database'
+username: 'root'
+password: 'oclcadmin'
