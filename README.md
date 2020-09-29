@@ -151,17 +151,6 @@ These are all methods you will use a lot in your automation when you interact wi
  
  https://www.rubydoc.info/gems/watir-webdriver/Watir
  
- # Accessibility
- 
- Here is how we currently test accessibility again the WCAG 2.0 compliance standard:
- 
- >https://confluence.oclc.org/display/WDD/Accessibility+Audits
- 
- The important things to note from this document are two things: we use VPAT to score compliance, and SiteImprove provides a way to report accessibility scores in a VPAT for the business.
- 
- If you check the way this project checks for accessibility errors in AcheckerPage.rb, you note there is no mention of SiteImprove or VPAT.  ***This is because the accessbility automatation in this project is not a direct substitute for checking accessbility.***
- 
- While both SiteImprove and Achecker will let you determine if a website has WCAG error or is compliant, when reporting to the business you will need to use SiteImprove.
  
  # Accessibility: Achecker
  
