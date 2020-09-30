@@ -13,7 +13,7 @@ include PageObject::PageFactory
 
 #Internal directories
 require_rel('../browser_page_models')
-require_rel('../helpers')
+#require_rel('../helpers')
 
 #def visit_page(page)
 #  @browser.goto page.url_for_page
