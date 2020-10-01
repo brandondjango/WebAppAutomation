@@ -6,4 +6,4 @@ qa_synopsis: -r support/cucumber_env.rb -r features/ -t '@regression' -t ~'@wip'
 mobile: -r support/cucumber_env.rb -r features/ -t '@mobile' -t ~'@wip' --format json --out=reports/REPORT_<%= Time.now.strftime('%Y_%m_%d_%H_%M')%>.json
 
 #jenkins jobs
-dev_ui_parallel: -r support/cucumber_env.rb -r features/ -t '@UI' -t ~'@wip' --format json --out=reports/REPORT_<%= Random.new_seed%>_<%= Time.now.strftime('%Y_%m_%d_%H_%M')%>.json
+dev_ui_parallel: -r support/cucumber_env.rb -t @UI --format json --out=reports/REPORT_<%= Random.new_seed%>_<%= Time.now.strftime('%Y_%m_%d_%H_%M')%>.json
