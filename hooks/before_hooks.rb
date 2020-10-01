@@ -6,16 +6,13 @@ end
 
 Before do |scenario|
 
-  # Feature name
-  @feature_name = scenario.feature.name
-
   # Scenario name
   @scenario_name = scenario.name
 
   # Tags (as an array)
   @scenario_tags = scenario.source_tag_names
 
-  print @feature_name + ": " + @scenario_name + "\n"
+  print @scenario_name + "\n"
 end
 
 

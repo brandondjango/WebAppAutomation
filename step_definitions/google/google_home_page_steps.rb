@@ -1,6 +1,7 @@
-When(/^I search for "([^"]*)"$/) do |arg|
-  page = visit_page(GoogleHomePage)
-  page.search_for_term(page.search_bar_element, arg)
+When(/^I search for "([^"]*)"$/) do |search_term|
+  page = GoogleHomePage.new @browser
+  page.go_to_page_url
+  page.search_for_term(search_term)
 end
 
 
