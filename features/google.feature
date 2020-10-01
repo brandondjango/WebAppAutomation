@@ -1,3 +1,4 @@
+@UI
 Feature: Google_Search_Page
 
 

@@ -74,7 +74,21 @@ To start the irb sandbox, we will need to do three things once we cd into the pr
     
     
   That's how you start the sandbox! Now let's use it.
+  
+  #Parallel Testing:
+  To run tests in parallel:
+  
+  >bundle exec parallel_cucumber features/ -n 5 -o '-t @only -r support/cucumber_env.rb -r features'
+    
+ For reporting, you have to be a little creative aggregating reports. Jenkins has a useful plugin to gather and combine cucumber reports in json, but it is still up to you to make sure parallel reports aren't overwritten by each other.
+ 
+ Here is an example of reports that won't overwrite each other for your cucumber.yml
+ 
+ >--format json --out=reports/REPORT_<%= Random.new_seed%>_<%= Time.now.strftime('%Y_%m_%d_%H_%M')%>.json
 
+The name is a mess, but it doesn't matter in this case.
+    
+    
  # Using the sandbox
  
  Once you're in the sandbox, try entering:
