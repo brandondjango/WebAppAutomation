@@ -7,8 +7,8 @@ Feature: APIFeature
 
     }
     """
-    When the "Post" request is sent to ""
-    And the "get" request is sent to ""
+    When the "Post" request is sent to "fghfg"
+    And the "get" request is sent to "fghgf"
 
   Scenario: API_IIIF manifest
     Given the following API request:
@@ -17,4 +17,4 @@ Feature: APIFeature
 
     }
     """
-    When the "GET" request is sent to ""
+    When the "GET" request is sent to "fghgf"
