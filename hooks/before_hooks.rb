@@ -20,11 +20,6 @@ end
 
 
 Before do
-  #caps = Selenium::WebDriver::Remote::Capabilities.new
-  #caps[:browserName] = "chrome"
-
-  #@browser = Watir::Browser.new(:remote, :url =>'http://localhost:4444/wd/hub', :desired_capabilities => caps)
-
 
   if ENV["BROWSER"].nil? || ENV["BROWSER"].downcase.include?("chrome")
     @browser = Watir::Browser.new(:chrome, switches: ['--ignore-certificate-errors'] ) unless ENV["NO_BROWSER"]
@@ -35,4 +30,9 @@ Before do
     driver = Webdriver::UserAgent.driver(browser: :chrome, agent: :iphone, orientation: :portrait)
     @browser = Watir::Browser.new driver
   end
+
+  @browser.goto("https://www.worlddog.org/")
+
+  page = VercelPage.new @browser
+  page.login_vercel
 end
