@@ -175,7 +175,7 @@ These are all methods you will use a lot in your automation when you interact wi
  When we navigate to a page we want to check for accessbility, we simply grab the source using this method, and paste it into Achecker.  After we check the source, we check the browser for the compliance element, If it is there, the test will pass/we are compliant. Otherwise, the test will fail/we are not compliant.
  
  That's it!
- 
+ .
  
  
  
